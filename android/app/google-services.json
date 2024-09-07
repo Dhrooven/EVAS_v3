@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "444974388963",
+    "project_id": "evas-v3",
+    "storage_bucket": "evas-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444974388963:android:82cecb86e64be288fc97d6",
+        "android_client_info": {
+          "package_name": "com.evas_v3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSOd1zVYjvTLgNftU5kjx47kja634k208"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
