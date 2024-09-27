@@ -109,6 +109,16 @@ android {
 }
 
 dependencies {
+//OlaMap SDK
+implementation(files("./libs/OlaMap.aar"))
+
+//Maplibre
+implementation ("org.maplibre.gl:android-sdk:10.0.2")
+implementation ("org.maplibre.gl:android-plugin-annotation-v9:1.0.0")
+implementation ("org.maplibre.gl:android-plugin-markerview-v9:1.0.0")
+
+    // implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    // implementation "androidx.lifecycle:lifecycle-compiler:2.0.0"
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 

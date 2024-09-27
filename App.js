@@ -8,13 +8,14 @@ import 'react-native-gesture-handler'
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-// import LoginScreen from './components/pages/LoginScreen';
-import MapScreen from './components/pages/MapScreen'
+
 // Import Screens
 import SplashScreen from './components/pages/SplashScreen'
 import LoginScreen from './components/pages/LoginScreen'
 import RegisterScreen from './components/pages/RegisterScreen'
 import HomeScreen from './components/pages/HomeScreen'
+import MapScreen from './components/pages/MapScreen'
+import MapScreenTest from './components/pages/MapScreenTest'
 const Stack = createStackNavigator()
 
 const Auth = () => {
@@ -47,7 +48,7 @@ const Auth = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='SplashScreen'>
+      <Stack.Navigator initialRouteName='MapScreenTest'>
         {/* SplashScreen which will come once for 2 Seconds */}
         <Stack.Screen
           name='SplashScreen'
@@ -61,6 +62,7 @@ const App = () => {
           component={Auth}
           options={{headerShown: false}}
         />
+
         <Stack.Screen
           name='HomeScreen'
           component={HomeScreen}
@@ -81,6 +83,13 @@ const App = () => {
           component={MapScreen}
           // Hiding header for Splash Screen
           options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='MapScreenTest'
+          component={MapScreenTest}
+          // Hiding header for Splash Screen
+          options={{headerShown: true}}
         />
       </Stack.Navigator>
     </NavigationContainer>

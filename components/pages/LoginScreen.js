@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
       .then((user) => {
         console.log(user);
         // If server response message same as Data Matched
-        if (user) navigation.replace("HomeScreen");
+        if (user) navigation.replace("MapScreen");
       })
       .catch((error) => {
         console.log(error);

@@ -1,25 +1,49 @@
 package com.evas_v3
-import android.os.Bundle;
+
+import android.os.Bundle
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
+import com.ola.mapsdk.interfaces.OlaMapCallback
+import com.ola.mapsdk.view.OlaMap
+import com.ola.mapsdk.view.OlaMapView
+
+// import com.ola.mapsdk.OlaMapView
+//import com.ola.mapsdk.MapStatusCallback
+// import com.ola.mapsdk.OlaMapsConfig
+// import okhttp3.OkHttpClient
+// import com.ola.mapsdk.AccessTokenInterceptor
 
 class MainActivity : ReactActivity() {
 
-  /**
-   * Returns the name of the main component registered from JavaScript. This is used to schedule
-   * rendering of the component.
-   */
-  override fun getMainComponentName(): String = "EVAS_v3"
-  
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(null)
-  }
-  /**
-   * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
-   * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
-   */
-  override fun createReactActivityDelegate(): ReactActivityDelegate =
-      DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
+    private lateinit var olamapView: OlaMapView
+    //private lateinit var mapStatusCallback: MapStatusCallback
+    //lateinit var olaMapsConfig: OlaMapsConfig
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // setContentView(R.layout.activity_main)
+        //
+        // // Initialize OlaMapView
+        // olamapView = findViewById(R.id.OlaMapView)
+        //
+        // olamapView.getMap(apiKey = "OLA_API_KEY",
+        //   olaMapCallback = object : OlaMapCallback {
+        //       override fun onMapReady(olaMap: OlaMap) {
+        //           // Map is ready to use
+        //       }
+        //
+        //       override fun onMapError(error: String) {
+        //           // Handle map error
+        //       }
+          // }
+        // )
 }
+
+    override fun getMainComponentName(): String = "EVAS_v3"
+
+    override fun createReactActivityDelegate(): ReactActivityDelegate =
+        DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
+}
+
