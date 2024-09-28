@@ -1,20 +1,20 @@
 import React from 'react';
-import { requireNativeComponent } from 'react-native';
-import { OLA_API_KEY } from '@env'; // Import the API key from the .env file
-// import { OLA_API_KEY } from 'react-native-dotenv';
+import { requireNativeComponent, View } from 'react-native';
+import { OLA_API_KEY } from '@env';
 
-// This 'OlaMapView' should match the string name defined in your view manager (`OlaMapViewManager`)
 const OlaMapView = requireNativeComponent('OlaMapView');
 
-const OlaMapComponent = (props) => {
+const OlaMapComponent = ({ markers, ...props }) => {
   return (
-    <OlaMapView 
-      style={{ flex: 1 }} 
-      apiKey={OLA_API_KEY} // Pass the imported API key here
-      {...props} // Pass other props (if any)
-    />
+    <View style={{ flex: 1 }}>
+      <OlaMapView 
+        style={{ flex: 1 }} 
+        apiKey={OLA_API_KEY}
+        markers={markers}
+        {...props}
+      />
+    </View>
   );
 };
 
 export default OlaMapComponent;
-
